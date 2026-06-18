@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Handika & Rukma | Undangan Ngunduh Mantu</title>
-  <meta name="description" content="Undangan digital Ngunduh Mantu Handika dan Rukma, Minggu 28 Juni 2026.">
+  <meta name="description" content="Undangan digital Ngunduh Mantu Handika dan Rukma, 17-18 Juni 2026.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -470,6 +470,11 @@
       line-height: .8;
     }
 
+    .calendar-date strong.date-range {
+      font-size: 2rem;
+      white-space: nowrap;
+    }
+
     .calendar-detail {
       padding: 14px 16px;
       display: grid;
@@ -639,9 +644,15 @@
       grid-row: span 2;
     }
 
+    .gallery-frame:nth-child(6) {
+      grid-column: 1 / -1;
+      grid-row: span 2;
+    }
+
     .gallery-frame:nth-child(1) img,
     .gallery-frame:nth-child(4) img,
-    .gallery-frame:nth-child(5) img {
+    .gallery-frame:nth-child(5) img,
+    .gallery-frame:nth-child(6) img {
       object-position: center top;
     }
 
@@ -1136,6 +1147,11 @@
         grid-row: span 2;
       }
 
+      .gallery-frame:nth-child(6) {
+        grid-column: 1 / -1;
+        grid-row: span 2;
+      }
+
       .gallery-caption {
         right: 10px;
         bottom: 10px;
@@ -1155,7 +1171,7 @@
     <div class="cover-panel">
       <p class="kicker">Wedding Invitation</p>
       <h1 class="names">Handika <span>&</span> Rukma</h1>
-      <p class="date-line" style="margin-top: 4px;">28 June 2026</p>
+      <p class="date-line" style="margin-top: 4px;">17-18 June 2026</p>
       <p class="guest-label">To:</p>
       <p class="guest-name" id="guestName">Tamu Undangan</p>
       <button class="btn" id="openInvite" type="button"><i data-lucide="mail-open"></i> Open Invitation</button>
@@ -1175,8 +1191,8 @@
         <p class="kicker reveal">Wedding Invitation</p>
         <h2 class="names reveal">Handika <span>&</span> Rukma</h2>
         <div class="date-line reveal">
-          <span>Minggu</span>
-          <span>28.06.2026</span>
+          <span>Rabu-Kamis</span>
+          <span>17-18.06.2026</span>
           <span>09.00 WIB</span>
         </div>
         <div class="countdown reveal" aria-label="Hitung mundur acara">
@@ -1233,18 +1249,18 @@
         <div class="calendar">
           <div class="calendar-date">
             <span>Juni</span>
-            <strong>28</strong>
+            <strong class="date-range">17-18</strong>
             <span>2026</span>
           </div>
           <div class="calendar-detail">
-            <b>Minggu</b>
+            <b>Rabu-Kamis</b>
             <span>Pukul 09.00 WIB</span>
             <span>Kediaman Mempelai Pria</span>
           </div>
         </div>
         <p class="address">Ketapang RT 04/RW 01, Susukan, Kab. Semarang</p>
         <div class="actions">
-          <a class="btn full" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ngunduh%20Mantu%20Handika%20%26%20Rukma&dates=20260628T020000Z/20260628T060000Z&details=Ngunduh%20Mantu%20Handika%20dan%20Rukma&location=Ketapang%20RT%2004%2FRW%2001%2C%20Susukan%2C%20Kab.%20Semarang" target="_blank" rel="noreferrer"><i data-lucide="calendar-plus"></i> Save The Date</a>
+          <a class="btn full" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ngunduh%20Mantu%20Handika%20%26%20Rukma&dates=20260617T020000Z/20260618T060000Z&details=Ngunduh%20Mantu%20Handika%20dan%20Rukma&location=Ketapang%20RT%2004%2FRW%2001%2C%20Susukan%2C%20Kab.%20Semarang" target="_blank" rel="noreferrer"><i data-lucide="calendar-plus"></i> Save The Date</a>
           <a class="btn secondary full" href="https://maps.app.goo.gl/9wg95vhZChCwqXj99?g_st=aw" target="_blank" rel="noreferrer"><i data-lucide="map-pinned"></i> Map Navigation</a>
         </div>
       </article>
@@ -1317,6 +1333,10 @@
         </button>
         <button class="gallery-frame" type="button" data-full="assets/gallery-5.jpeg" aria-label="Buka foto akad 5">
           <img src="assets/gallery-5.jpeg" alt="Handika dan Rukma duduk bersama di bawah dekorasi bunga" loading="lazy">
+          <span class="gallery-caption"><span><i data-lucide="maximize-2"></i></span></span>
+        </button>
+        <button class="gallery-frame" type="button" data-full="assets/gallery-6.jpeg" aria-label="Buka foto akad 6">
+          <img src="assets/gallery-6.jpeg" alt="Handika dan Rukma menunjukkan buku nikah" loading="lazy">
           <span class="gallery-caption"><span><i data-lucide="maximize-2"></i></span></span>
         </button>
       </div>
@@ -1402,7 +1422,7 @@
   </div>
 
   <script>
-    const eventDate = new Date("2026-06-28T09:00:00+07:00");
+    const eventDate = new Date("2026-06-17T09:00:00+07:00");
     const guestName = new URLSearchParams(window.location.search).get("to") || "Tamu Undangan";
     const cover = document.getElementById("cover");
     const toast = document.getElementById("toast");
